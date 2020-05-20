@@ -4,8 +4,8 @@ public extension UIImageAsset {
    /**
     * Creates an image asset with registration of tht eimages with the light and dark trait collections.
     * - Parameters:
-    * - lightModeImage: The image you want to register with the image asset with light user interface style.
-    * - darkModeImage: The image you want to register with the image asset with dark user interface style.
+    *    - lightModeImage: The image you want to register with the image asset with light user interface style.
+    *    - darkModeImage: The image you want to register with the image asset with dark user interface style.
     */
    convenience init(lightModeImage: UIImage?, darkModeImage: UIImage?) {
       self.init()
@@ -14,8 +14,8 @@ public extension UIImageAsset {
    /**
     * Register an images with the light and dark trait collections respectively.
     *- Parameters:
-    *- lightModeImage: The image you want to register with the image asset with light user interface style.
-    *- darkModeImage: The image you want to register with the image asset with dark user interface style.
+    *    - lightModeImage: The image you want to register with the image asset with light user interface style.
+    *    - darkModeImage: The image you want to register with the image asset with dark user interface style.
     */
    func register(lightModeImage: UIImage?, darkModeImage: UIImage?) {
       register(lightModeImage, for: .light)
@@ -24,8 +24,8 @@ public extension UIImageAsset {
    /**
     * Register an image with the specified trait collection.
     * - Parameters:
-    * - image: The image you want to register with the image asset.
-    * - traitCollection: The traits to associate with image.
+    *    - image: The image you want to register with the image asset.
+    *    - traitCollection: The traits to associate with image.
     */
    func register(_ image: UIImage?, for userInterfaceStyle: UIUserInterfaceStyle) {
       guard let image = image else { return }

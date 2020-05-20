@@ -5,11 +5,14 @@ import UIKit
  * UIView().backgroundColor =  DynamicColor().with(light: .white, dark: .black).resolved
  * static let primaryTextColor = DynamicColor(light: .systemGreen, dark: .systemOrange)
  * UIView().backgroundColor = primaryTextColor.resolved
+ * UIView().backgroundColor = UIColor.green.resolved // green
  * - Fixme: ⚠️️ Rename to DarkModeColor ?
+ * - The point is that you can use normal UIColor and DynamicColor
+ * - Note: https://stackoverflow.com/questions/57494528/crash-when-setting-property-in-uicolor-subclass
  */
 class DynamicColor: UIColor {
-   var dark: UIColor = .black
-   var light: UIColor = .black
+   var dark: UIColor = .clear
+   var light: UIColor = .clear
    /**
     * - Note: For some reason UIColor wont allow you to add variables to a subclass with regular init, the bellow is the only way
     */

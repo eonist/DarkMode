@@ -1,13 +1,14 @@
 import UIKit
 
 extension UIColor {
-   
-   // Setup custom colours we can use throughout the app using hex values
-   static let seemuBlue = UIColor(hex: 0x00adf7)
+   /**
+    * Setup custom colours we can use throughout the app using hex values
+    */
    static let youtubeRed = UIColor(hex: 0xf80000)
    static let transparentBlack = UIColor(hex: 0x000000, a: 0.5)
-   
-   // Create a UIColor from RGB
+   /**
+    * Create a UIColor from RGB
+    */
    convenience init(red: Int, green: Int, blue: Int, a: CGFloat = 1.0) {
       self.init(
          red: CGFloat(red) / 255.0,
@@ -16,8 +17,9 @@ extension UIColor {
          alpha: a
       )
    }
-   
-   // Create a UIColor from a hex value (E.g 0x000000)
+   /**
+    * Create a UIColor from a hex value (E.g 0x000000)
+    */
    convenience init(hex: Int, a: CGFloat = 1.0) {
       self.init(
          red: (hex >> 16) & 0xFF,

@@ -1,13 +1,13 @@
 import UIKit
 
-public extension UIImageAsset {
+extension UIImageAsset {
    /**
     * Creates an image asset with registration of tht eimages with the light and dark trait collections.
     * - Parameters:
     *    - lightModeImage: The image you want to register with the image asset with light user interface style.
     *    - darkModeImage: The image you want to register with the image asset with dark user interface style.
     */
-   convenience init(lightModeImage: UIImage?, darkModeImage: UIImage?) {
+   public convenience init(lightModeImage: UIImage?, darkModeImage: UIImage?) {
       self.init()
       register(lightModeImage: lightModeImage, darkModeImage: darkModeImage)
    }
@@ -17,7 +17,7 @@ public extension UIImageAsset {
     *    - lightModeImage: The image you want to register with the image asset with light user interface style.
     *    - darkModeImage: The image you want to register with the image asset with dark user interface style.
     */
-   func register(lightModeImage: UIImage?, darkModeImage: UIImage?) {
+   public func register(lightModeImage: UIImage?, darkModeImage: UIImage?) {
       register(lightModeImage, for: .light)
       register(darkModeImage, for: .dark)
    }
@@ -27,14 +27,14 @@ public extension UIImageAsset {
     *    - image: The image you want to register with the image asset.
     *    - traitCollection: The traits to associate with image.
     */
-   func register(_ image: UIImage?, for userInterfaceStyle: UIUserInterfaceStyle) {
+   public func register(_ image: UIImage?, for userInterfaceStyle: UIUserInterfaceStyle) {
       guard let image = image else { return }
       register(image, with: .init(userInterfaceStyle: userInterfaceStyle))
    }
    /**
     * Returns the variant of the image that best matches the current trait collection. For early SDKs returns the image for light user interface style.
     */
-   func image() -> UIImage {
+   public func image() -> UIImage {
       if #available(iOS 13.0, tvOS 13.0, *) {
          image(with: .current)
       }

@@ -6,17 +6,19 @@ import UIKit
  * static let primaryTextColor = DynamicColor(light: .systemGreen, dark: .systemOrange)
  * UIView().backgroundColor = primaryTextColor.resolved
  * UIView().backgroundColor = UIColor.green.resolved // green
+ * - Note: the point of extendin UICOlor is that you can use DynamicColor and UIColor interchangably
+ * - Important: ⚠️️ You have to call .resolve, unless the dynamiccolor is instantiated as a regular color
  * - Fixme: ⚠️️ Rename to DarkModeColor ?
  * - The point is that you can use normal UIColor and DynamicColor
  * - Note: https://stackoverflow.com/questions/57494528/crash-when-setting-property-in-uicolor-subclass
  */
-class DynamicColor: UIColor {
-   var dark: UIColor = .clear
-   var light: UIColor = .clear
+public class DynamicColor: UIColor {
+   public var dark: UIColor = .init()
+   public var light: UIColor = .init()
    /**
     * - Note: For some reason UIColor wont allow you to add variables to a subclass with regular init, the bellow is the only way
     */
-   func with(light: UIColor, dark: UIColor) -> DynamicColor {
+   public func with(light: UIColor, dark: UIColor) -> DynamicColor {
       self.dark = dark
       self.light = light
       return self
@@ -29,7 +31,7 @@ extension UIColor {
    /**
     * - Fixme: ⚠️️  or maybe use where self == ...?
     */
-   var resolved: UIColor {
+   public var resolved: UIColor {
       // if self == Dynamic else return self,
       if let dynamicColor = self as? DynamicColor {
          return DynamicColor.dynamicResolved(color: dynamicColor)
@@ -45,9 +47,9 @@ extension DynamicColor {
    /**
     * Toggle color based on current OS dark mode
     */
-   static func dynamicResolved(color: DynamicColor) -> UIColor {
+   fileprivate static func dynamicResolved(color: DynamicColor) -> UIColor {
       if #available(iOS 13.0, *) {
-         return UIColor.init { (traitCollection: UITraitCollection) -> UIColor in
+         return UIColor { (traitCollection: UITraitCollection) -> UIColor in
             if traitCollection.userInterfaceStyle == .dark {
                return color.dark
             } else {

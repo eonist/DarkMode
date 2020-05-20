@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "DarkMode",
-            targets: ["DarkMode"]),
+            targets: ["DarkMode"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -23,6 +23,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "DarkModeTests",
-            dependencies: ["DarkMode"]),
+            dependencies: ["DarkMode"])
     ]
 )

@@ -15,8 +15,7 @@ extension UIApplication {
                scene.windows.override(userInterfaceStyle)
             }
          }
-      }
-      else {
+      } else {
          windows.override(userInterfaceStyle)
       }
    }

@@ -7,8 +7,7 @@ extension UserDefaults {
    public var overridedUserInterfaceStyle: UIUserInterfaceStyle {
       get {
          UIUserInterfaceStyle(rawValue: integer(forKey: #function)) ?? .unspecified
-      }
-      set {
+      } set {
          set(newValue.rawValue, forKey: #function)
       }
    }

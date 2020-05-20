@@ -11,7 +11,7 @@ class View: UIView {
 //      Swift.print("resolvedColor:  \(resolvedColor.cgColor)")
 //      let colorTwo: UIColor = DynamicColor().with(light: #colorLiteral(red: 0.9764705882352941, green: 0.9372549019607843, blue: 0.6941176470588235, alpha: 1), dark: .x6A6A6A)
 //      Swift.print("colorTwo.resolved:  \(colorTwo.resolved)")
-      self.backgroundColor = Theme.Background.primary.resolved
+      self.backgroundColor = Theme.Background.primary
    }
    /**
     * Boilerplate
@@ -20,7 +20,3 @@ class View: UIView {
       fatalError("init(coder:) has not been implemented")
    }
 }
-// - Fixme: ⚠️️ add theme struct to show how DynamicColor works
-// - Fixme: ⚠️️ cleanup
-// - Doc
-// make public

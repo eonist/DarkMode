@@ -17,26 +17,23 @@ extension ViewController {
       DispatchQueue.global(qos: .background).async { // asyncAfter also works here, instead of sleep
          sleep(3)
          DispatchQueue.main.async {
-            self.overrideUserInterfaceStyle = .dark
+            Swift.print("switch mode")
+            let mode: UIUserInterfaceStyle = self.isDarkMode ? .light : .dark
+            UIApplication.shared.override(mode)
+            Swift.print("UserDefaults.standard.overridedUserInterfaceStyle:  \(UserDefaults.standard.overridedUserInterfaceStyle.rawValue)")
+            UserDefaults.standard.overridedUserInterfaceStyle = mode // store in userdef
          }
       }
    }
    /**
-    * Detect darkode switches
+    * Detect darkmode switches
     */
    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
       super.traitCollectionDidChange(previousTraitCollection)
-      if #available(iOS 13.0, *) {
-         if self.traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
-            if traitCollection.userInterfaceStyle == .dark {
-               // Dark
-               Swift.print("Go to Dark \(self.isDarkMode)")
-            } else {
-               Swift.print("Go to Light \(self.isDarkMode)")
-            }
-         }
-      } else {
-         // Fallback on earlier versions
+      traitCollection.performForDifferentColorAppearance(comparedTo: previousTraitCollection) {
+         // update related colors
+         Swift.print("Change dark/light-mode \(self.isDarkMode)")
       }
+      Swift.print("fallback on earlier versions")
    }
 }

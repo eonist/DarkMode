@@ -1,5 +1,8 @@
 import UIKit
-
+/**
+ * ## Examples:
+ * let imageAsset = UIImageAsset(lightModeImage: .init(named: "lightLogo"), darkModeImage: .init(named: "darkLogo"))
+ */
 extension UIImageAsset {
    /**
     * Creates an image asset with registration of tht eimages with the light and dark trait collections.

@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 
 extension UIApplication {
@@ -20,3 +21,4 @@ extension UIApplication {
       }
    }
 }
+#endif

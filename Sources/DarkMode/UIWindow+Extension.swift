@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 
 extension UIWindow {
@@ -22,3 +23,4 @@ extension Array where Element: UIWindow {
       }
    }
 }
+#endif

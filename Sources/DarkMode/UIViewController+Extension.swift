@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 
 extension UIViewController {
@@ -12,3 +13,4 @@ extension UIViewController {
       }
    }
 }
+#endif

@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 
 extension UITraitCollection {
@@ -21,3 +22,4 @@ extension UITraitCollection {
       }
    }
 }
+#endif

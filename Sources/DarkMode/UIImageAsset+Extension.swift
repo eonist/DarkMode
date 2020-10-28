@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 /**
  * ## Examples:
@@ -44,3 +45,4 @@ extension UIImageAsset {
       return image(with: .init(userInterfaceStyle: .light))
    }
 }
+#endif

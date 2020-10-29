@@ -29,6 +29,7 @@ extension Apperance {
 }
 /**
  * Detect apperance change (light/dark mode)
+ * - Fixme: ⚠️️ rename to something more apropriate?
  * - Note: uses notification center to detect mode change: https://stackoverflow.com/questions/39048894/how-to-detect-switch-between-macos-default-dark-mode-using-swift-3
  * ## Example:
  * ChangeDetector.onInterfaceChange = {/*Apperance().inDarkMode*/}
@@ -57,3 +58,13 @@ public final class ChangeDetector {
 extension Notification.Name {
    static let AppleInterfaceThemeChangedNotification = Notification.Name("AppleInterfaceThemeChangedNotification")
 }
+
+// ⚠️️ this also works ⚠️️, might be more backward / forward compatible?
+//self.init(name: nil) {
+//   switch $0.name {
+//   case .darkAqua, .vibrantDark, .accessibilityHighContrastDarkAqua, .accessibilityHighContrastVibrantDark:
+//      return dark
+//   default:
+//      return light
+//   }
+//}

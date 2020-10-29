@@ -1,14 +1,16 @@
 import Cocoa
 
 open class View: NSView {
-   override open var isFlipped: Bool { true }/*TopLeft orientation*/
+   override open var isFlipped: Bool { true } // TopLeft orientation
+   let backgroundColor: NSColor = Theme.Background.tertiary
    override public init(frame: CGRect) {
       super.init(frame: frame)
       Swift.print("hello world")
-      self.wantsLayer = true/*if true then view is layer backed*/
-//      NSColor.init(hex: )
-      self.layer?.backgroundColor = Theme.Background.tertiary.cgColor
-//      Swift.print("Theme.Background.primary:  \(Theme.Background.primary)")
+      self.wantsLayer = true // if true then view is layer backed
+   }
+   override open func draw(_ dirtyRect: NSRect) {
+      super.draw(dirtyRect)
+      self.layer?.backgroundColor = backgroundColor.cgColor
    }
    /**
     * Boilerplate

@@ -11,13 +11,13 @@ extension Color {
     */
    public convenience init(light: Color, dark: Color) {
       #if os(macOS)
-      self.init(name: nil) { _ in // $0.name which gives: .darkAqua, .vibrantDark, .accessibilityHighContrastDarkAqua, .accessibilityHighContrastVibrantDark etc
          if #available(macOS 10.15, *) {
-            return Apperance().inDarkMode ? dark : light
+            self.init(name: nil) { _ in // $0.name which gives: .darkAqua, .vibrantDark, .accessibilityHighContrastDarkAqua, .accessibilityHighContrastVibrantDark etc
+               Apperance().inDarkMode ? dark : light
+            }
          } else {
-             return light // Fallback on earlier versions
+            self.init(cgColor: light.cgColor)!  // Fallback on earlier versions
          }
-      }
       #else
       if #available(iOS 13.0, tvOS 13.0, *) {
          self.init { traitCollection in

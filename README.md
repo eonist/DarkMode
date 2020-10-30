@@ -38,8 +38,8 @@ class View: UIView {
 class View: NSView {
    override public init(frame: CGRect) {
       super.init(frame: frame)
-      self.wantsLayer = true/*if true then view is layer backed*/
-      self.layer?.backgroundColor = Theme.Background.primary.cgColor
+      self.wantsLayer = true // if true then view is layer backed
+      self.layer?.backgroundColor = Theme.Background.primary.cgColor // since cgColor is not dynamic, place this code in the draw, or layout method to make it react to OS appearance change
    }
 }
 

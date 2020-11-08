@@ -1,3 +1,4 @@
+#if os(macOS)
 import Foundation
 /**
  * A central location to store light/dark-mode value in macOS
@@ -58,7 +59,7 @@ public final class ChangeDetector {
 extension Notification.Name {
    static let AppleInterfaceThemeChangedNotification = Notification.Name("AppleInterfaceThemeChangedNotification")
 }
-
+#endif
 // ⚠️️ this also works ⚠️️, might be more backward / forward compatible?
 //self.init(name: nil) {
 //   switch $0.name {

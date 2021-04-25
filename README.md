@@ -10,7 +10,7 @@
 > 🔦 DarkMode made simple
 
 ### Install
-- SPM: `.package(url: "https://github.com/passbook/Darkmode.git", .branch("master"))`
+- SPM: `.package(url: "https://github.com/sentryco/Darkmode.git", .branch("master"))`
 
 ### Example (iOS)
 

@@ -10,7 +10,7 @@
 > 🔦 DarkMode made simple
 
 ### Install
-- SPM: `.package(url: "https://github.com/passbook/Darkmode.git", .branch("master"))`
+- SPM: `.package(url: "https://github.com/sentryco/Darkmode.git", .branch("master"))`
 
 ### Example (iOS)
 
@@ -27,8 +27,9 @@ class View: UIView {
    override init(frame: CGRect) {
       super.init(frame: frame)
       self.backgroundColor = Theme.Background.primary
-      UIApplication.shared.override(.dark) // changes colors to dark-mode
-      UIApplication.shared.override(.light) // changes colors to light-mode
+      // Programatically change dark / light mode (this can also be done in prefs)
+      // UIApplication.shared.override(.dark) // changes colors to dark-mode
+      // UIApplication.shared.override(.light) // changes colors to light-mode
    }
 }
 ```

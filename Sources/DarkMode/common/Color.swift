@@ -11,6 +11,10 @@ public typealias Color = NSColor
 import AppKit.NSColor
 
 extension NSColor {
+   /**
+    * Universal method to create color from r-g-b
+    * - Fixme: ⚠️️ write example?
+    */
    public convenience init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
       self.init(srgbRed: red, green: green, blue: blue, alpha: alpha)
    }

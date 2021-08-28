@@ -5,7 +5,7 @@ import Cocoa
 #endif
 /**
  * Nice way to organize colors, hex + visual
- * - Note: only for internal testing
+ * - Remark: Only for internal testing
  */
 extension Color {
    static let xF9EFB1 = #colorLiteral(red: 0.9764705882352941, green: 0.9372549019607843, blue: 0.6941176470588235, alpha: 1)

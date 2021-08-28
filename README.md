@@ -43,7 +43,6 @@ class View: NSView {
       self.layer?.backgroundColor = Theme.Background.primary.cgColor // since cgColor is not dynamic, place this code in the draw, or layout method to make it react to OS appearance change
    }
 }
-
 ```
 
 ### Nice way to organize a theme that has  support for dark and light mode:
@@ -76,7 +75,7 @@ internal class Theme {
 ```swift
 /**
  * Nice way to organize colors, hex + visual
- * - Note: only for internal testing
+ * - Note: Only for internal testing
  */
 extension Color {
    static let xF9EFB1 = #colorLiteral(red: 0.9764705882352941, green: 0.9372549019607843, blue: 0.6941176470588235, alpha: 1)

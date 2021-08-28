@@ -3,6 +3,9 @@ import Cocoa
 open class View: NSView {
    override open var isFlipped: Bool { true } // TopLeft orientation
    let backgroundColor: NSColor = Theme.Background.tertiary
+   /**
+    * Initiate view
+    */
    override public init(frame: CGRect) {
       super.init(frame: frame)
       Swift.print("hello world")

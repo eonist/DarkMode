@@ -1,13 +1,12 @@
 import Foundation
 /**
  * App-color-scheme
- * - Note: only for internal testing
+ * - Remark: Only for internal testing
  * ## Examples:
  * Color.Text.header // white
  * Color.UI.Background.secondary // lightGray
- * - Fixme: ⚠️️ maybe even extend UIColor? .Text.title etc
  */
-internal class Theme {
+internal final class Theme {
    struct Text {
       static let title: Color = .init(light: #colorLiteral(red: 0.2605174184, green: 0.2605243921, blue: 0.260520637, alpha: 1), dark: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
       static let header: Color = .init(light: .x6A6A6A, dark: .init(hex: 0xFEFEFE))

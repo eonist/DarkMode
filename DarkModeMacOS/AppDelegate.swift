@@ -8,6 +8,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     */
    lazy var view: NSView = createView()
    func applicationDidFinishLaunching(_ aNotification: Notification) {
+      Swift.print("Apperance:  \(Apperance())")
+      Swift.print("Apperance().inDarkMode:  \(Apperance().inDarkMode)")
       _ = view
    }
 }
@@ -16,7 +18,6 @@ extension AppDelegate {
       let contentRect = window.contentRect(forFrameRect: window.frame)/*size of win sans titlebar*/
       let view: View = .init(frame: contentRect)
       window.contentView = view
-//      view.layer?.backgroundColor = NSColor.white.cgColor
       return view
    }
 }

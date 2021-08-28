@@ -3,7 +3,7 @@ import UIKit
 
 extension UIViewController {
    /**
-    * Assert if darkmode is enabled
+    * Assert if dark-mode is enabled
     */
    public var isDarkMode: Bool {
       if #available(iOS 13.0, *) {

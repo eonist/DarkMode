@@ -3,6 +3,7 @@
 ![Lang](https://img.shields.io/badge/Language-Swift%205.0-orange.svg)
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift)
 [![Tests](https://github.com/sentryco/DarkMode/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/DarkMode/actions/workflows/Tests.yml)
+[![codebeat badge](https://codebeat.co/badges/0029bc5e-100c-4f55-9705-b289e0f8e0c9)](https://codebeat.co/projects/github-com-sentryco-darkmode-master)
 
 # DarkMode
 

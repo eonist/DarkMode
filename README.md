@@ -85,3 +85,6 @@ extension Color {
    static let x202020 = #colorLiteral(red: 0.1254901960784314, green: 0.1254901960784314, blue: 0.1254901960784314, alpha: 1)
 }
 ```
+
+## Resources: 
+- Good post on darkmode: https://medium.com/@YSaddiq/supporting-dark-mode-in-your-ios-app-3f19b2b12827

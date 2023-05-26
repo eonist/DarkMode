@@ -65,12 +65,3 @@ extension Notification.Name {
    static let AppleInterfaceThemeChangedNotification = Notification.Name("AppleInterfaceThemeChangedNotification")
 }
 #endif
-// ⚠️️ this also works ⚠️️, might be more backward / forward compatible?
-// self.init(name: nil) {
-//   switch $0.name {
-//   case .darkAqua, .vibrantDark, .accessibilityHighContrastDarkAqua, .accessibilityHighContrastVibrantDark:
-//      return dark
-//   default:
-//      return light
-//   }
-// }

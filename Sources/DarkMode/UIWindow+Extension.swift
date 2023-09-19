@@ -3,8 +3,8 @@ import UIKit
 
 extension UIWindow {
    /**
-    * Overrides the user interface style adopted by the view and all of its subviews.
-    * - Parameter userInterfaceStyle: The user interface style adopted by the view and all of its subviews.
+    * This function allows you to override the user interface style for the current view and all its subviews.
+    * - Parameter userInterfaceStyle: The desired user interface style to be applied to the view and all its subviews.
     */
    public func override(_ userInterfaceStyle: UIUserInterfaceStyle) {
       if #available(iOS 13.0, tvOS 13.0, *) {
@@ -14,8 +14,8 @@ extension UIWindow {
 }
 extension Array where Element: UIWindow {
    /**
-    * Overrides the user interface style adopted by all elements.
-    * - Parameter userInterfaceStyle: The user interface style adopted by all elements.
+    * This function allows you to override the user interface style for all UIWindow elements in the array.
+    * - Parameter userInterfaceStyle: The desired user interface style to be applied to all UIWindow elements.
     */
    public func override(_ userInterfaceStyle: UIUserInterfaceStyle) {
       self.forEach { window in

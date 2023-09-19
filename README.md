@@ -9,8 +9,19 @@
 
 > 🔦 DarkMode made simple
 
-### Install
-- SPM: `.package(url: "https://github.com/sentryco/Darkmode.git", .branch("master"))`
+## Table of content:
+- [DarkMode](#darkmode)
+- [Installation](#installation)
+- [Examples](#examples)
+  - [iOS](#example-ios)
+  - [macOS](#example-macos)
+  - [Organizing a Theme](#nice-way-to-organize-a-theme-that-has-support-for-dark-and-light-mode)
+  - [Organizing Colors](#nice-way-to-organize-colors)
+- [Resources](#resources)
+- [License](#license)
+
+## Installation
+To install DarkMode, use Swift Package Manager (SPM) and add the following to your Package.swift file: `.package(url: "https://github.com/sentryco/Darkmode.git", .branch("master"))`
 
 ### Example (iOS)
 
@@ -88,3 +99,7 @@ extension Color {
 
 ## Resources: 
 - Good post on darkmode: https://medium.com/@YSaddiq/supporting-dark-mode-in-your-ios-app-3f19b2b12827
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

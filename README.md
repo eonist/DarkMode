@@ -10,7 +10,6 @@
 > 🔦 DarkMode made simple
 
 ## Table of content:
-- [DarkMode](#darkmode)
 - [Installation](#installation)
 - [Examples](#examples)
   - [iOS](#example-ios)

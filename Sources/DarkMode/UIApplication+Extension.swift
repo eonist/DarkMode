@@ -1,6 +1,5 @@
 #if os(iOS)
 import UIKit
-#endif
 
 extension UIApplication {
     /**
@@ -30,3 +29,4 @@ extension UIApplication {
         }
     }
 }
+#endif

@@ -3,7 +3,6 @@ import UIKit
 #elseif os(macOS)
 import Cocoa
 #endif
-
 /**
  * This extension provides a convenient way to organize colors using hex values and visual literals.
  * - Remark: This is intended for internal testing only.

@@ -1,6 +1,5 @@
 #if os(iOS)
 import UIKit
-#endif
 
 extension UserDefaults {
    /**
@@ -20,3 +19,4 @@ extension UserDefaults {
       }
    }
 }
+#endif

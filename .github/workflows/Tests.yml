@@ -9,10 +9,11 @@ on:
 jobs:
   SwiftLint: ## Adds swift-linting to GH actions
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: GitHub Action for SwiftLint
-        uses: norio-nomura/action-swiftlint@3.2.1
+    ## Something changed with action-swiftlint and it doesnt use the local lint file anymore
+    ##steps: 
+      ##- uses: actions/checkout@v3
+      ##- name: GitHub Action for SwiftLint
+       ## uses: norio-nomura/action-swiftlint@3.2.1
   build:
     runs-on: macos-latest
     steps:

@@ -18,8 +18,8 @@ extension Array where Element: UIWindow {
     * - Parameter userInterfaceStyle: The desired user interface style to be applied to all UIWindow elements.
     */
    public func override(_ userInterfaceStyle: UIUserInterfaceStyle) {
-      self.forEach { window in
-         window.override(userInterfaceStyle)
+      self.forEach { window in // Loop through each window in the array
+         window.override(userInterfaceStyle) // Override the user interface style for the current window
       }
    }
 }

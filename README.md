@@ -9,6 +9,12 @@
 
 > 🔦 DarkMode made simple
 
+### Description
+- DarkMode is a Swift library that **simplifies the process of implementing dark mode** in **iOS and macOS** applications. 
+- With this library, developers can easily switch between light and dark modes, and organize their **themes and colors** in a clean and efficient way. 
+- The library provides a set of tools and utilities that make it easy to manage the appearance of an application, and it is compatible with Swift Package Manager (SPM), making it easy to integrate into any project. 
+- Whether you're building a new app or updating an existing one, DarkMode can help you create a seamless and intuitive user experience across all devices and platforms.
+
 ## Table of content:
 - [Installation](#installation)
 - [Examples](#examples)

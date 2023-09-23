@@ -1,6 +1,5 @@
 #if os(macOS)
 import Foundation
-
 /**
  * This enum provides a central location to store the light / dark-mode value in `macOS`.
  * - Remark: This supports Catalina, but seems to work without it as well. More details can be found here: https://stackoverflow.com/a/57429660/5389500
@@ -8,17 +7,17 @@ import Foundation
  * - Note: An article about the new auto-mode can be found here: https://medium.com/@ruiaureliano/check-light-dark-appearance-for-macos-mojave-catalina-fb2343af875f
  */
 public enum Apperance: String {
-   case dark, light
+     case dark // Option for dark appearance
+     case light // Option for light appearance
 }
-
 extension Apperance {
    /**
     * Initializes the Apperance enum.
     * - Note: The typeStr is lowercased because the key was uppercased in macOS 11, but was lowercase in 10.5.
     */
    public init() {
-      let typeStr: String = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? Apperance.light.rawValue
-      self = Apperance(rawValue: typeStr.lowercased()) ?? Apperance.light
+      let typeStr: String = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? Apperance.light.rawValue // Get the value of the "AppleInterfaceStyle" key from UserDefaults, or use the raw value of the light appearance if it's not set
+      self = Apperance(rawValue: typeStr.lowercased()) ?? Apperance.light // Create an instance of the Appearance enum using the value obtained from UserDefaults, or use the light appearance if the value is not a valid option
    }
 
    /**
@@ -27,13 +26,13 @@ extension Apperance {
     * - Example: Use `Apperance().inDarkMode` to check if the OS is in dark mode.
     */
    public var inDarkMode: Bool {
-      let currentStyle = Apperance()
-      if case .dark = currentStyle {
-         return true
-      } else if case .light = currentStyle {
-         return false
-      } else {
-         fatalError("Not supported")
+      let currentStyle = Apperance() // Create an instance of the Appearance enum
+      if case .dark = currentStyle { // Check if the current appearance is dark
+         return true // Return true if the current appearance is dark
+      } else if case .light = currentStyle { // Check if the current appearance is light
+         return false // Return false if the current appearance is light
+      } else { // If the current appearance is neither dark nor light
+         fatalError("Not supported") // Terminate the program with an error message
       }
    }
 }

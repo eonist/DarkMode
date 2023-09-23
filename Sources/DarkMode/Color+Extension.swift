@@ -33,7 +33,6 @@ extension Color {
       #endif
    }
 }
-
 /**
  * Helper extensions for Color
  */
@@ -42,8 +41,15 @@ extension Color {
     * Setup custom colors we can use throughout the app using hex values
     */
    internal static let youtubeRed = Color(hex: 0xf80000)
+   /**
+    * Creates a static instance of the Color struct representing a semi-transparent black color.
+    * - Parameters:
+    *    - hex: The hex value of the color.
+    *    - a: The alpha value of the color.
+    *
+    * - Returns: A semi-transparent black color with the specified hex and alpha values.
+    */
    internal static let transparentBlack = Color(hex: 0x000000, a: 0.5)
-   
    /**
     * Create a UIColor from RGB
     * - Parameters:
@@ -55,7 +61,6 @@ extension Color {
    public convenience init(red: Int, green: Int, blue: Int, a: CGFloat = 1.0) {
       self.init(red: .init(red) / 255.0, green: .init(green) / 255.0, blue: .init(blue) / 255.0, alpha: a)
    }
-   
    /**
     * Create a UIColor from a hex value (E.g 0x000000)
     * - Parameters:

@@ -11,10 +11,10 @@ extension UIViewController {
     * - Returns: A Boolean value indicating whether dark mode is enabled. Returns `true` if dark mode is enabled, `false` otherwise.
     */
    public var isDarkMode: Bool {
-      if #available(iOS 13.0, *) {
-         return self.traitCollection.userInterfaceStyle == .dark
-      } else {
-         return false
+      if #available(iOS 13.0, *) { // Check if the device is running iOS 13 or later
+         return self.traitCollection.userInterfaceStyle == .dark // Return true if the user interface style is dark, false otherwise
+      } else { // If the device is running an earlier version of iOS
+         return false // Return false, as dark mode is not supported
       }
    }
 }

@@ -23,8 +23,8 @@ extension UITraitCollection {
     *    - closure: A closure that gets executed if the color appearances of the current and provided trait collections differ.
     */
    public func performForDifferentColorAppearance(comparedTo traitCollection: UITraitCollection?, closure: (() -> Void)) {
-      if #available(iOS 13.0, tvOS 13.0, *), hasDifferentColorAppearance(comparedTo: traitCollection) {
-         closure()
+      if #available(iOS 13.0, tvOS 13.0, *), hasDifferentColorAppearance(comparedTo: traitCollection) { // Check if the device is running iOS 13 or tvOS 13 or later, and if the color appearance is different from the current trait collection
+         closure() // Call the closure if the above conditions are met
       }
    }
 }

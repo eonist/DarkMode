@@ -17,11 +17,11 @@ extension ViewController {
       DispatchQueue.global(qos: .background).async { // asyncAfter also works here, instead of sleep
          sleep(3)
          DispatchQueue.main.async {
-            Swift.print("switch mode")
-            let mode: UIUserInterfaceStyle = self.isDarkMode ? .light : .dark
-            UIApplication.shared.override(mode)
-            Swift.print("UserDefaults.standard.overridedUserInterfaceStyle:  \(UserDefaults.standard.overridedUserInterfaceStyle.rawValue)")
-            UserDefaults.standard.overridedUserInterfaceStyle = mode // store in userdef
+            Swift.print("switch mode") // prints "switch mode" to the console
+            let mode: UIUserInterfaceStyle = self.isDarkMode ? .light : .dark // sets the mode to light if isDarkMode is true, otherwise sets it to dark
+            UIApplication.shared.override(mode) // overrides the user interface style of the application with the selected mode
+            Swift.print("UserDefaults.standard.overridedUserInterfaceStyle:  \(UserDefaults.standard.overridedUserInterfaceStyle.rawValue)") // prints the current overridden user interface style to the console
+            UserDefaults.standard.overridedUserInterfaceStyle = mode // stores the selected mode in UserDefaults for future use
          }
       }
    }

@@ -35,7 +35,7 @@ extension Color {
       blue: 0.9960784313725490, // blue component
       alpha: 1 // alpha component
    )
-   
+
    /**
     * Represents a dark gray color with hex value #202020.
     */

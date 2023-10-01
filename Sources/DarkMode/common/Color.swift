@@ -1,7 +1,6 @@
 import Foundation
 #if os(iOS)
 import UIKit
-
 // Define a type alias for UIColor on iOS platform
 public typealias Color = UIColor
 #elseif os(macOS)

@@ -1,5 +1,5 @@
 // swift-tools-version:5.6
-import PackageDescription
+import PackageDescription // Import the PackageDescription module
 
 let package = Package( // Define a new package
     name: "DarkMode", // Set the package name to "DarkMode"

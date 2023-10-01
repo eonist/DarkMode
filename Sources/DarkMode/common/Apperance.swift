@@ -53,7 +53,12 @@ public final class ChangeDetector {
     * Call this function to start listening for OS appearance changes.
     */
    public static func activateChangeCallback() {
-      DistributedNotificationCenter.default.addObserver(self, selector: #selector(interfaceModeChanged), name: .AppleInterfaceThemeChangedNotification, object: nil)
+      DistributedNotificationCenter.default.addObserver(
+         self, // observer object
+         selector: #selector(interfaceModeChanged), // selector method
+         name: .AppleInterfaceThemeChangedNotification, // notification name
+         object: nil // notification object
+      )
    }
 
    /**

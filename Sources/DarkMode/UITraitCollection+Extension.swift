@@ -7,13 +7,11 @@ extension UITraitCollection {
     * It can be used to apply light-themed styles to your UI components.
     */
    public static let light: UITraitCollection = .init(userInterfaceStyle: .light)
-   
    /**
     * This trait collection represents the dark user interface style.
     * It can be used to apply dark-themed styles to your UI components.
     */
    public static let dark: UITraitCollection = .init(userInterfaceStyle: .dark)
-   
    /**
     * Executes the provided closure if the current trait collection differs from the provided one in terms of color appearance.
     * This method is only available on iOS 13 or tvOS 13 and later.

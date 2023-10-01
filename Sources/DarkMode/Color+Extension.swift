@@ -42,6 +42,7 @@ extension Color {
     * Setup custom colors we can use throughout the app using hex values
     */
    internal static let youtubeRed = Color(hex: 0xf80000)
+   // Fix add doc
    internal static let transparentBlack = Color(hex: 0x000000, a: 0.5)
    
    /**

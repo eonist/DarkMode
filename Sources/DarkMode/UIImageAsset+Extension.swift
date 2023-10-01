@@ -19,7 +19,6 @@ extension UIImageAsset {
       self.init()
       register(lightModeImage: lightModeImage, darkModeImage: darkModeImage)
    }
-   
    /**
     * Method to register images for light and dark user interface styles.
     * - Parameters:
@@ -30,7 +29,6 @@ extension UIImageAsset {
       register(lightModeImage, for: .light)
       register(darkModeImage, for: .dark)
    }
-   
    /**
     * Method to register an image for a specific user interface style.
     * - Parameters:
@@ -41,7 +39,6 @@ extension UIImageAsset {
       guard let image = image else { return }
       register(image, with: UITraitCollection(userInterfaceStyle: userInterfaceStyle))
    }
-   
    /**
     * Method to retrieve the image variant that best matches the current trait collection. 
     * For early SDKs, it returns the image for light user interface style.

@@ -12,7 +12,7 @@ extension UserDefaults {
          // Fetch the raw value of the UI style from UserDefaults using the function name as the key.
          // If no value is found, default to 'unspecified'.
          UIUserInterfaceStyle(rawValue: integer(forKey: #function)) ?? .unspecified
-      } 
+      }
       set {
          // Save the raw value of the new UI style to UserDefaults using the function name as the key.
          set(newValue.rawValue, forKey: #function)

@@ -23,7 +23,12 @@ extension NSColor {
     */
    public convenience init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
       // Initialize the color using sRGB color space
-      self.init(srgbRed: red, green: green, blue: blue, alpha: alpha)
+      self.init(
+         srgbRed: red, // The red component of the color
+         green: green, // The green component of the color
+         blue: blue, // The blue component of the color
+         alpha: alpha // The alpha value of the color
+      )
    }
 }
 #endif

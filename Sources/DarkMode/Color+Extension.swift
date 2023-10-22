@@ -1,5 +1,9 @@
 import Foundation
-import QuartzCore
+#if os(iOS)
+import UIKit
+#elseif os(macOS)
+import Cocoa
+#endif
 
 extension Color {
    /**
@@ -13,7 +17,7 @@ extension Color {
       #if os(macOS)
          if #available(macOS 10.15, *) {
             // For macOS 10.15 and later, the color is determined based on the current appearance mode
-            self.init(name: nil) { _/*: NSApperance*/ in
+            self.init(name: nil) { (_: NSAppearance) in
                Apperance().inDarkMode ? dark : light
             }
          } else {

@@ -16,7 +16,10 @@ extension UIImageAsset {
     */
    public convenience init(lightModeImage: UIImage?, darkModeImage: UIImage?) {
       self.init() // Initialize a new instance of UIImageAsset
-      register(lightModeImage: lightModeImage, darkModeImage: darkModeImage) // Register the light mode image and dark mode image for the UIImageAsset instance
+      register(
+         lightModeImage: lightModeImage, // The image to use in light mode
+         darkModeImage: darkModeImage // The image to use in dark mode
+      ) // Register the light mode image and dark mode image for the UIImageAsset instance
    }
    /**
     * Method to register images for light and dark user interface styles.

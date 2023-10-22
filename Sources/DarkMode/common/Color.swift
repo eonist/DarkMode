@@ -11,7 +11,6 @@ public typealias Color = NSColor
 
 #if os(macOS)
 import AppKit.NSColor
-
 // Extend NSColor to add a convenience initializer
 extension NSColor {
    /**

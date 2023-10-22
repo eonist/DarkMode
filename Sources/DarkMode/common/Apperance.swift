@@ -26,7 +26,7 @@ extension Apperance {
     * - Example: Use `Apperance().inDarkMode` to check if the OS is in dark mode.
     */
    public var inDarkMode: Bool {
-      let currentStyle = Apperance() // Create an instance of the Appearance enum
+      let currentStyle: Apperance = .init() // Create an instance of the Appearance enum
       if case .dark = currentStyle { // Check if the current appearance is dark
          return true // Return true if the current appearance is dark
       } else if case .light = currentStyle { // Check if the current appearance is light
@@ -72,6 +72,6 @@ public final class ChangeDetector {
  * This extension adds a type for DarkMode support.
  */
 extension Notification.Name {
-   static let AppleInterfaceThemeChangedNotification = Notification.Name("AppleInterfaceThemeChangedNotification")
+   static let AppleInterfaceThemeChangedNotification: Notification.Name = .init("AppleInterfaceThemeChangedNotification")
 }
 #endif

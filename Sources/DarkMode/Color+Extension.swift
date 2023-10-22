@@ -13,7 +13,7 @@ extension Color {
       #if os(macOS)
          if #available(macOS 10.15, *) {
             // For macOS 10.15 and later, the color is determined based on the current appearance mode
-            self.init(name: nil) { _ in
+            self.init(name: nil) { _/*: NSApperance*/ in
                Apperance().inDarkMode ? dark : light
             }
          } else {
